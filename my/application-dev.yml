@@ -1,2 +1,19 @@
 
-foo: shigang add
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@127.0.0.1:8888/eureka/
+server:
+  port: 6422
+spring:
+  application:
+    name: stonehiy-member
+
+
+security:
+  basic:
+    enabled: true
+  user:
+      #这是config-server的用户名和密码
+      name: root
+      password: root
