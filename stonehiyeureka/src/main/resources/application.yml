@@ -1,0 +1,27 @@
+server:
+  port: 8888
+
+
+spring:
+  application:
+    name: stonehiy-eureka
+
+eureka:
+  datacenter: trmap
+  environment: product
+  instance:
+    hostname: 127.0.0.1
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://root:root@${eureka.instance.hostname}:${server.port}/eureka/
+    register-with-eureka: false #关闭自己作为客户端注册
+    fetch-registry: false #关闭自己作为客户端注册
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: root #用户名和密码，等会访问的时候，会要求你登录，服务注册的时候也需要带着用户名和密码
+    password: root

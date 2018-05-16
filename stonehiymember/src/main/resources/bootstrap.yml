@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    config:
+      # Config Server 地址
+      uri: http://127.0.0.1:6224
+      # 对应的Config Server的配置文件对应的profile，即环境
+      profile: dev
+      # 对应的Config Server的配置文件对应的Git分支
+      label: master
+  application:
+    # 对应的Config Server的配置文件对应的application
+    name: stonehiy-config
